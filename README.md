@@ -9,16 +9,3 @@
 
 ef þið hafið einhverjar spurningar eða hugmyndir um þetta endilega talið við mig og látið mig vita.
 kveðja Birgir
-
-
-Hugmyndir:
-
-Countdown from specific dates and or events/holidays.
-
-Movie library.
-
-Video Game library.
-
-A "phone"
-
-brain teaser website
