@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rock Paper Scissors</ hookup</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="page">
+
+    <!-- TOP -->
+    <div class="top">
+      <div class="note">Changes based on<br>who won</div>
+      <div class="title">Who will win?</div>
+      <div></div>
+    </div>
+
+    <!-- CHOICES -->
+    <section class="choices">
+      <div class="choice" id="choice-scissors" data-move="scissors">
+        <div class="label">Skæri</div>
+        <img src="images/scissors.png" alt="Scissors">
+      </div>
+
+      <div class="choice" id="choice-paper" data-move="paper">
+        <div class="label">Blað</div>
+        <img src="images/paper.png" alt="Paper">
+      </div>
+
+      <div class="choice" id="choice-rock" data-move="rock">
+        <div class="label">Steinn</div>
+        <img src="images/rock.png" alt="Rock">
+      </div>
+    </section>
+
+    <!-- BOTTOM -->
+    <section class="bottom">
+      <div class="hint">
+        Randomly highlight<br>
+        1 of the three bc of<br>
+        "npc"
+      </div>
+
+      <!-- RESULT BAR (NOT A BUTTON) -->
+      <div class="result-bar" id="resultBar">
+        Result goes here
+      </div>
+
+      <div class="effects">
+        <div class="effects-title">
+          Background<br>effects
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
