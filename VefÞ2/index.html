@@ -1,60 +1,122 @@
 <!doctype html>
+<!--
+  Declares this as an HTML5 document.
+  This tells the browser how to correctly interpret the file.
+-->
 <html lang="en">
+<!--
+  Root element of the page.
+  lang="en" helps screen readers and accessibility tools.
+-->
+
 <head>
+  <!-- Character encoding (supports special characters like æ, ø, þ) -->
   <meta charset="utf-8" />
+
+  <!-- Makes the site responsive on mobile devices -->
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rock Paper Scissors</ hookup</title>
+
+  <!-- Text shown in the browser tab -->
+  <title>Rock Paper Scissors</title>
+
+  <!-- Links the external CSS file that controls all styling and background effects -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!--
+    Main container for the entire page.
+    Used to keep content centered and layered above background effects.
+  -->
   <main class="page">
 
-    <!-- TOP -->
+    <!-- ================= TOP SECTION ================= -->
+    <!--
+      This section contains the main status text.
+      The text inside #statusText is changed by JavaScript to show:
+      - "You win!"
+      - "You lose!"
+      - "It's a tie!"
+    -->
     <div class="top">
-      <div class="note">Changes based on<br>who won</div>
-      <div class="title">Who will win?</div>
+      <!-- Empty divs are used for spacing in the grid layout -->
+      <div></div>
+
+      <!--
+        This is the main status text.
+        JavaScript updates this element's textContent.
+      -->
+      <div class="title" id="statusText">Who will win?</div>
+
       <div></div>
     </div>
 
-    <!-- CHOICES -->
+    <!-- ================= CHOICES SECTION ================= -->
+    <!--
+      This section contains the three player choices.
+      Each button:
+      - Is clickable
+      - Has a unique ID used by JavaScript
+      - Displays an image and a label
+    -->
     <section class="choices">
-      <div class="choice" id="choice-scissors" data-move="scissors">
-        <div class="label">Skæri</div>
-        <img src="images/scissors.png" alt="Scissors">
-      </div>
 
-      <div class="choice" id="choice-paper" data-move="paper">
+      <!-- SCISSORS BUTTON -->
+      <!--
+        ID "scissors" is used in JavaScript:
+        document.getElementById("scissors")
+      -->
+      <button class="choice" id="scissors" type="button">
+        <!-- Text label shown above the image -->
+        <div class="label">Skæri</div>
+
+        <!-- Image representing scissors -->
+        <img src="images/scissors.png" alt="Scissors">
+      </button>
+
+      <!-- PAPER BUTTON -->
+      <button class="choice" id="paper" type="button">
         <div class="label">Blað</div>
         <img src="images/paper.png" alt="Paper">
-      </div>
+      </button>
 
-      <div class="choice" id="choice-rock" data-move="rock">
+      <!-- ROCK BUTTON -->
+      <button class="choice" id="rock" type="button">
         <div class="label">Steinn</div>
         <img src="images/rock.png" alt="Rock">
-      </div>
+      </button>
+
     </section>
 
-    <!-- BOTTOM -->
+    <!-- ================= BOTTOM SECTION ================= -->
+    <!--
+      This section displays what the player picked.
+      It does NOT determine the winner.
+      JavaScript updates the text inside #resultBar.
+    -->
     <section class="bottom">
-      <div class="hint">
-        Randomly highlight<br>
-        1 of the three bc of<br>
-        "npc"
-      </div>
+      <div></div>
 
-      <!-- RESULT BAR (NOT A BUTTON) -->
+      <!--
+        Result bar:
+        JavaScript updates this text to show:
+        "You picked rock"
+        "You picked paper"
+        "You picked scissors"
+      -->
       <div class="result-bar" id="resultBar">
-        Result goes here
+        Make your choice
       </div>
 
-      <div class="effects">
-        <div class="effects-title">
-          Background<br>effects
-        </div>
-      </div>
+      <div></div>
     </section>
 
   </main>
+
+  <!--
+    Links the JavaScript file.
+    Placed at the bottom so the DOM loads before JS runs.
+  -->
+  <script src="script.js"></script>
 </body>
 </html>
