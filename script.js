@@ -46,6 +46,7 @@ function getResult(player, ai) {
     (player === "paper" && ai === "rock") ||
     (player === "scissors" && ai === "paper")
   ) {
+    // shows what the ai picked to the player
     document.getElementById("aiChoice").innerHTML = `Opponents pick: ${ai}`;
     return "You win!";
   }
