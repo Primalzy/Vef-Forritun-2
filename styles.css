@@ -230,3 +230,12 @@ body::before{
   text-align: center;
   border-radius: 10px;
 }
+
+/* ================= GENERIC CONTAINER (rules page) ================= */
+/* Centers content for standalone pages like rules.html */
+.container{
+  max-width: 820px;
+  margin: 48px auto;
+  padding: 24px;
+  text-align: center; /* Center all text inside rules page */
+}
